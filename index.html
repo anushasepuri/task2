@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS TASK8</title>
+	<link rel="stylesheet" type="text/css" href="js task8.css">
+	<meta name="Viewport" content="width=device-width,initial scale=1.0">
+</head>
+<body style="font-size: 20px;">
+	<p style="font-size: 25px;text-align: center;"><br><span style="color: black;">S.Anusha</span>
+	<span style="color: blue;">__MITS1920WC10</span>
+	<span style="color: brown;">__21/09/2020</span>
+	<span style="color:green;">__Arrays</span></p>
+	<div class="a">
+		<div class="b">
+			<div class="k">
+				<h2>DETAILS</h2>
+				<p><b>Your Name: </b><input type="text" name="" placeholder="Enter your name"></p>
+				<p><b>Your Roll No: </b><input type="text" name="" placeholder="Enter your roll no"></p>
+				<p><b>Your Department: </b><input type="text" name="" placeholder="Enter your department"></p>
+				<p><b>Your section: </b><input type="text" name="" placeholder="Enter your section"></p>
+				<p><b>Year of study: </b><input type="text" name="" placeholder="Enter your year"></p>
+				<button onclick="success()">Submit</button>
+				<p id="d" style="font-size: 30px;"></p>
+				<script type="text/javascript" style="">
+					function success(){
+						document.getElementById('d').innerHTML="<b>Success!</b>";
+					}
+				</script>
+			</div>
+		</div>
+		<div class="c">
+			<h2 style="text-align: center;">ARRAY METHODS</h2>
+			 <script type="text/javascript">
+    			var e=["Anusha","Aparna","Supriya"];
+  			</script>
+  			<b><u>My array:</u></b>
+ 		    <p id="demo1"></p>
+  			<script type="text/javascript">
+				document.getElementById('demo1').innerHTML="<ul>"+"<li>"+e+"</li>"+"</ul>";
+			</script>
+			<div class="f">
+				<div class="g">
+					<b><u>POP:</b></u><p>This removes the last element of an array and returns that element.</p>
+							<p>array.pop() returns Supriya</p>
+				    <p>After pop(),my array is</p>
+					<p id="demo2"></p>
+		   		    <script type="text/javascript">
+		   		    	var e=["Anusha","Aparna","Supriya"];
+		      			e.pop();
+		     		   	document.getElementById('demo2').innerHTML="<ul>"+"<li>"+e+"</li>"+"</ul>";
+		    		</script>
+		    	</div>
+		    	<div class="g">
+		    		<b><u>PUSH:</b></u><p>This adds the new elements at the end of an array and returns the new length of the array.</p>
+					<p>array.push("Vyshu") returns 4</p>
+					<p>After push(),my array is</p>
+		    		<p id="demo3"></p>
+		    		<script type="text/javascript">
+		    			var e=["Anusha","Aparna","Supriya"];
+		      			e.push("Vyshu");
+		      			document.getElementById('demo3').innerHTML="<ul>"+"<li>"+e+"</li>"+"</ul>";
+		    		</script>
+		    	</div>
+		    	<div class="g">
+		    		<b><u>SHIFT:</b></u><p>This removes the first element of an array and returns the removed element.</p>
+					<p>array.shift() returns Anusha</p>
+					<p>After shift(),my array is</p>
+		    		<p id="demo4"></p>
+		    		<script type="text/javascript">
+		    			var e=["Anusha","Aparna","Supriya"];
+		      			e.shift();
+		      			document.getElementById('demo4').innerHTML="<ul>"+"<li>"+e+"</li>"+"</ul>";
+		    		</script>
+		    	</div>
+		   		<div class="g">
+		    		<b><u>UNSHIFT:</b></u><p>This adds the new elements at the begining of an array and returns the new length of the array.</p>
+					<p>array.unshift("Kowsalya") returns 4</p>
+					<p>After unshift(),my array is</p>
+		    		<p id="demo5"></p>
+		    		<script type="text/javascript">
+		    			var e=["Anusha","Aparna","Supriya"];
+		      			e.unshift("Kowsalya");
+		      			document.getElementById('demo5').innerHTML="<ul>"+"<li>"+e+"</li>"+"</ul>";
+		    		</script>
+		    	</div>
+		    	<div class="g">
+		    		<b><u>DELETE:</u></b><p>This leaves undefined holes in an array</p>
+		    		<p>delete array[index] will delete the element corresponding to that index value.</p>
+		    		<p>After delete[1],my array is</p>
+		    		<p id="demo6"></p>
+		    		<script type="text/javascript">
+		      			var e=["Anusha","Aparna","Supriya"];
+		      			delete e[1];
+		      			document.getElementById('demo6').innerHTML=e;
+		      			document.write("After deleting,array[1] returns ",e[1]);
+		    		</script>
+				</div>
+				<div class="g">
+					<b><u>ISARRAY()</u></b><p>This returns true if it is array,otherwise it returns false.</p>
+					<script type="text/javascript">
+						var e=["Anusha","Aparna","Supriya"];
+					</script>
+					<p>["Anusha","Aparna","Supriya"] is an array,so it returns,</p>
+					<b><p id="demo7"></p></b>
+					<p>{no:506} is not an array,so it returns</p>
+					<b><p id="demo8"></p></b>
+					<script type="text/javascript">
+						var f={no:506}
+						document.getElementById('demo7').innerHTML=isArray(e);
+						document.getElementById('demo8').innerHTML=isArray(f);
+						function isArray(a){
+     						return a.constructor.toString().indexOf("Array")>-1;
+     					}
+					</script>
+				</div>
+				<div class="g">
+					<b><u>toString()</u></b><p>This returns the string representation of the array elements.</p>
+					<p>array.toString(),the representation will be </p>
+					<p id="demo9"></p>
+					<script type="text/javascript">
+						var e=["Anusha","Aparna","Supriya"];
+						var i=e.toString()
+						document.getElementById('demo9').innerHTML=i;
+					</script>
+				</div>
+				<div class="g">
+					<b><u>JOIN()</u></b><p>The join() method returns the array as a string.The elements will be separated by a specified separator. The default separator is comma (,).</p>
+					<p>My array is [1,2,3]</p>
+					<p>array.join('*'')</p>
+					<p id="demo10"></p>
+					<script type="text/javascript">
+						var j=[1,2,3];
+						document.getElementById('demo10').innerHTML=j.join('*');
+					</script>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
